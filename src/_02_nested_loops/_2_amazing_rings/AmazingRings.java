@@ -41,7 +41,8 @@ public class AmazingRings extends PApplet {
     static final int HEIGHT = 600;
 
     int amazing = 300;
-    int speed = 1;
+    int loops = 1200;
+    int speed = 11;
 
     @Override
     public void settings() {
@@ -60,14 +61,18 @@ public class AmazingRings extends PApplet {
     	background(255, 255, 254);
     	for(int rings = 0; rings<40; rings++) {
     		ellipse(amazing, 500, rings*15, rings*15);
-    		ellipse(1200, 500, rings*15, rings*15);
-    	}
+    		ellipse(loops, 500, rings*15, rings*15);
+    		
+    	}	
+    	loops -= speed;
     	amazing += speed;
-    	if(amazing == 1500) {
+    	if(amazing >= 1500 || amazing <=0) {
     		speed=-speed;
     	}
+    
+    	
     }
-
+    
     static public void main(String[] args) {
         PApplet.main(AmazingRings.class.getName());
     }

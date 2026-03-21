@@ -40,10 +40,32 @@ public class NestedLoops {
 
 		}
 		for(int l = 0; l<3; l++){
-			System.out.println();
+			
 			for(int m = 1; m<4; m++) {
-				System.out.print(l*3 + m);
+			//	System.out.print(l*3 + m);
+			}//System.out.println();
+		}
+		for(int t = 0; t<10; t++) {
+			for(int g = 1; g<11; g++) {
+				//System.out.print(t*10 + g + " ");
+				
+			}//System.out.println();
+		}
+		
+		for(int c = 1; c<7; c++) {
+			for(int r = 0; r<c; r++) {
+				System.out.print("*");
 			}
+			System.out.println();
+		}
+		for(int supa = 1; supa<7; supa++) {
+			for(int qwerty = 6; qwerty>supa; qwerty--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for(int sahur = 0; sahur<101; sahur++) {
+			System.out.println(  100- sahur);
 		}
 	}
 }

@@ -56,10 +56,12 @@ public class IntroToMethods {
 	}
 
 	public static String method4(String message) {
-		return message;
+		return "Hi " + message;
 	}
 	
 	public static void method5(String message, int num) {
-		System.out.println(message+num);
+		for(int i  = 0; i < num; i ++) {
+			System.out.println(message+i);
+		}
 	}
 }

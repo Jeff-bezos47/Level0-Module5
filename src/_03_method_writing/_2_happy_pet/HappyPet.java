@@ -7,14 +7,14 @@ public class HappyPet {
 	// 1. Add the following variable to the next line: static int happinessLevel =
 	// 0;
 	// this will be used to store the happiness of your pet
-	static int happinessLevel = 0;
+	static int happinessLevel = 20;
 
 	public static void main(String[] args) {
 		// 2. Ask the user what kind of pet they want to buy, and store their answer in
 		// a variable
 		String pettywap = JOptionPane.showInputDialog("what pet do ya want (you can only choose fih or dog)");
 		// 3. REPEAT steps 4 - 7 enough times to make your pet happy!
-		while (happinessLevel < 100) {
+		while (true) {
 
 			// 4. Use showOptionDialog to ask the user what they want to do to make their
 			// pet happy
@@ -31,9 +31,19 @@ public class HappyPet {
 				nhap(pettywap);
 
 			}
+			if (task == 2) {
+				fehtch(pettywap);
+			}
 			// 7. If you determine the happiness level is large enough, tell the
 			// user that he loves his pet and use break; to exit for loop.
-
+			if(happinessLevel<0) {
+				JOptionPane.showMessageDialog(null,"your pet is tooh sad to come out :(");
+				break;
+			}
+			if(happinessLevel>100) {
+				JOptionPane.showMessageDialog(null, "your pet is happy and satified");
+				break;
+			}
 		}
 	}
 
@@ -78,7 +88,16 @@ happinessLevel = happinessLevel - 15;
 	}
 
 	static void fehtch(String pettywap) {
-		JOptionPane.showMessageDialog(null, "fih is very happy and has a jolly old time running around");
-		happinessLevel = happinessLevel + 10;
+		if (pettywap.equals("fih")) {
+		JOptionPane.showMessageDialog(null, "fih is very happy and has a jolly old time running around although \n"
+				+ "fih don have legs so, fih is nuetral even tho he had a fu time he doesnt have legs so fih is nure=ntrual");
+		happinessLevel = happinessLevel + 8;
+		}
+		
+		else if(pettywap.equals("dog")) {
+			JOptionPane.showMessageDialog(null, "dog is a dog so dog is a happy pappy becuase since dog is dog dog is liking fhetch \n"
+					+ " so dog is very happy and pleased with you providing his happiness pappiness needs");
+			happinessLevel = happinessLevel + 12;
+		}
 	}
 }
